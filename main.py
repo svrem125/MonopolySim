@@ -22,5 +22,3 @@ class Player:
 
 player1 = Player('0')
 player2 = Player('1')
-
-player1.throw()
