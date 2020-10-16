@@ -10,6 +10,9 @@ class Player:
     def pay(self, target, amount):
         self.money -= amount
         target.money += amount
+        
+    def placeData(self):
+        res = next((sub for sub in monopolyData['tiles'] if sub['name'] == chance['tileid']), None) 
     
     def throw(self):
         throw = (random.randint(0,6), random.randint(0, 6))
@@ -28,3 +31,4 @@ class Player:
     
 
 players = Player.makePlayers(4)
+
