@@ -19,7 +19,12 @@ class Player:
         else:
             return False
     
+    @classmethod
+    def makePlayers(cls, count):
+        players = []
+        for player in range(count):
+            players.append(Player(str(player)))
+        return players            
+    
 
-player1 = Player('0')
-player2 = Player('1')
-meme = 'memes'
+players = Player.makePlayers(4)
